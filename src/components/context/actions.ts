@@ -1,0 +1,29 @@
+import  { Book,  TYPE_GET_BOOK,  TYPE_GET_BOOKS,TYPE_UPDATE_TO_READING, TYPE_GET_CURRENT_READINGS, TYPE_GET_FINISHED_READINGS, TYPE_UPDATE_TO_FINISHED, TYPE_ADD_TO_LIBRARY } from "./types";
+
+export interface API_GET_BOOKS{
+    type:TYPE_GET_BOOKS,
+    payload:Book[]
+}
+export interface API_GET_BOOK{
+    type:TYPE_GET_BOOK,
+    payload:Book
+}
+export interface API_GET_CURRENT_READINGS{
+    type:TYPE_GET_CURRENT_READINGS,
+    payload:Book[]
+}
+export interface API_GET_FINISHED_READINGS{
+    type:TYPE_GET_FINISHED_READINGS,
+    payload:Book[]
+}
+export interface API_UPDATE_TO_FINISHED{
+    type:TYPE_UPDATE_TO_FINISHED,
+}
+export interface API_UPDATE_TO_READING{
+    type:TYPE_UPDATE_TO_READING,
+}
+export interface API_ADD_TO_LIBRARY{
+    type:TYPE_ADD_TO_LIBRARY,
+}
+export type IAction=API_GET_BOOKS | API_GET_BOOK | API_GET_CURRENT_READINGS | API_GET_FINISHED_READINGS
+|API_UPDATE_TO_FINISHED| API_UPDATE_TO_READING | API_ADD_TO_LIBRARY; 
